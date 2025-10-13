@@ -1,47 +1,60 @@
 meta:
   version: "0.1"
-  last_updated: "2025-02-14"
+  last_updated: "2025-10-13"
 problem:
-  statement: "A magyar mérnökinformatikus hallgatók számára a szakdolgozati források rendszerezése és hivatkozásainak kezelése széttagolt és időrabló feladat, ami csúszásokhoz és minőségi problémákhoz vezet."
+  statement: "A fiatal, egészségtudatos felhasználók számára az egészség- és fitneszadatok nyomon követése, kezelése és optimalizálása több különböző alkalmazással időigényes és fragmentált folyamat, ami csökkenti a motivációt és a fejlődést."
 target_audience:
   personas:
-    - name: "Anna, a kutató alapszakos"
-      segment: "Harmadéves mérnökinformatikus hallgató, aki a szakdolgozatához gyűjt forrásokat."
+    - name: "Vajk, a tech-savvy fiatal felnőtt"
+      segment: "Harmadéves programtervező informatikus, rendszeres élsportoló, az egészséges életmódjához szüksége van egy alkalmazásra amiben mindent nyomon tud követni."
       needs:
-        - "Gyors forrásgyűjtés megbízható jegyzeteléssel"
-        - "Automatikus hivatkozásgenerálás különböző formátumokhoz"
-        - "Egyszerű együttműködés konzulenssel"
-    - name: "Bence, az esti képzésen"
-      segment: "Munka mellett tanuló levelezős hallgató."
+        - "Személyre szabott edzés- és étrendajánlások"
+        - "Alvás és hidratáció követése"
+        - "Hangulat naplózása, motiváció gyűjtése"
+        - "Motiváció fenntartása gamifikációval és közösségi kihívásokkal"
+    - name: "Lilla, egészségtudatos egyetemista"
+      segment: "22 éves, otthon és edzőteremben is sportol, szeretne fejlődni mentális és fizikai egészség terén."
       needs:
-        - "Időhatékony anyagfeldolgozás"
-        - "Offline hozzáférés a jegyzetekhez"
+        - "Egyszerű, átlátható naplózás és trendkövetés"
+        - "AI-alapú tippek az egészséges életmódhoz"
+        - "Közösségi visszajelzés és kihívások"
 value_proposition:
-  concise: "A ResearchFlow egy felhőalapú kutatási munkafolyamat-kezelő, amely összefogja a források gyűjtését, jegyzetelését és hivatkozás-generálását, így a hallgatók 30%-kal gyorsabban tudnak haladni a szakdolgozatukkal a manuális táblázatokhoz képest."
+  concise: "A Boosted egy integrált egészség- és fitnesz app, ami összefogja az edzést, étrendet, alvást, hidratációt és mentális egészséget, személyre szabott AI-ajánlásokkal és gamifikált közösségi élménnyel, így a felhasználók motiváltabban és hatékonyabban tudják követni fejlődésüket."
   differentiators:
-    - "Kontextusérzékeny MI-ajánlások a jegyzetek rendszerezéséhez"
-    - "Közös munkafelület konzulensi megjegyzésekkel"
+    - "Teljesen integrált platform: edzés, étrend, alvás, hidratáció és mentális egészség egy helyen"
+    - "AI-alapú személyre szabott javaslatok"
+    - "Gamifikált kihívások, virtuális pontok és achievementek"
+    - "Okosórák és fitnesz-karkötők integrációja"
+    - "Közösségi funkciók barátokkal és csoportokkal"
+
 scope:
   in:
-    - "Források rögzítése böngészőből vagy kézi űrlapból"
-    - "Jegyzetek és címkék kezelése"
-    - "Automatikus hivatkozás generálás APA és IEEE formátumban"
+    - "Edzésprogram generátor otthoni és edzőtermi környezethez"
+    - "Személyre szabott vitamin- és táplálékkiegészítő ajánló és nyomkövető"
+    - "Alvásnapló és optimalizáló riasztó"
+    - "Mentális egészség napló és mood tracker"
+    - "Hidratációs emlékeztető"
+    - "Étrend- és fitnesz kalkulátor"
+    - "Barátokkal/csoportokkal való versenyzés és kihívások"
+    - "Gamifikációs pont- és achievement rendszer"
   out:
     - "Offline desktop alkalmazás"
-    - "Teljes szövegű PDF-szerkesztés"
-    - "Automatikus plágium-ellenőrzés"
+
 success_metrics:
-  - "≥10 korai tesztelő aktívan használja a ResearchFlow-t a szakdolgozat előkészítéséhez."
-  - "A tesztelők átlagos elégedettsége ≥4/5 az onboarding után."
-  - "A forrásbeviteli idő 30%-kal csökken a kontrollcsoporthoz képest."
+  - "≥5 korai tesztelő aktívan használja az appot az első hónapban"
+  - "Átlagos elégedettség ≥4/5 a funkciók használata után"
+  - "A felhasználók legalább 50%-a teljesít legalább egy kihívást hetente"
 risks:
-  - "Adatvédelmi elvárások az egyetemi szabályzatok miatt"
-  - "A felhasználók meglévő munkafolyamatainak megváltoztatása ellenállást válthat ki"
+  - "Adatvédelmi és GDPR követelmények betartása a személyes egészségadatok miatt"
+  - "A felhasználók különböző szintű tech-ismerete miatt az app használata nehézséget okozhat"
+  - "Motiváció fenntartása hosszú távon"
 first_tech_decision_ref: "sprints/01/architecture/adr/0001-first-tech-choice.md"
 research_summary:
   insights:
-    - "A hallgatók ~60%-a jelenleg Google Sheetben vezeti a forrásokat, ami nehezen kereshető."
-    - "Az interjúalanyok fele külön eszközt használ jegyzetelésre, ami duplikált munkát okoz."
+    - "Sok felhasználó több különböző alkalmazást használ különböző célokra (edzés, étrend, alvás, hidratáció), ami fragmentált élményt ad"
+    - "A gamifikált elemek növelik a motivációt és aktivitást"
+    - "Az AI-alapú személyre szabott tippek növelik a felhasználói elköteleződést"
   pain_points:
-    - "Hosszú idő a hivatkozások formázása"
-    - "Nehezen megosztható a konzulensekkel a munka aktuális állapota"
+    - "Időigényes az adatok manuális követése és összegzése"
+    - "Nehéz motivációt találni és fenntartani hosszú távon"
+    - "Közösségi támogatás hiánya csökkenti a rendszerességet"
