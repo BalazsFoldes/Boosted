@@ -1,20 +1,30 @@
 # 0001: Kezdeti technológiai stack kiválasztása
 
-- Dátum: 2025-02-09
+- Dátum: 2025-10-15
 - Státusz: Elfogadva
 
 ## Kontextus
-A ResearchFlow MVP-nek gyorsan kell iterálnia a felhasználói visszajelzések alapján. Olyan keretrendszerre van szükség, amelyet a csapat ismer, rendelkezik kész komponenskészlettel, és egyszerűen telepíthető felhőalapú platformokra. A backendhez megbízható relációs adatbázis és tipizált API szükséges.
+A Boosted egy AI-alapú egészség- és fitnesz webalkalmazás, amely integrálja a felhasználók edzés-, étrend-, alvás-, hidratáció- és hangulatadatait egyetlen felületen.  
+A cél az, hogy a felhasználók motiváltak maradjanak és könnyen nyomon követhessék a fejlődésüket.  
 
 ## Döntés
-A frontendhez **Next.js (React)** keretrendszert választunk TypeScript támogatással. A backend szolgáltatás **Node.js (Express)** köré épül, az adatokat pedig **PostgreSQL** tárolja. A fejlesztők jól ismerik a JavaScript/TypeScript ökoszisztémát, így lerövidül az onboarding és gyorsabb a prototípuskészítés.
+A frontendhez **Next.js (React)** keretrendszert választunk **TypeScript** illetve **TailwindCSS** támogatással, mivel:
+- modern, SEO-barát webalkalmazásokat tesz lehetővé,
+- beépített API-rétege révén egyszerű backend-integrációt kínál,
+- a csapatnak már van React- és TypeScript-tapasztalata.
+
+A backend **Django (Python)** lesz **PostgreSQL** adatbázissal, mert:
+- erős admin felületet biztosít (user management, adatkezelés),
+- könnyen integrálható AI-modulokkal (pl. OpenAI GPT, scikit-learn),
+- későbbi fizetési integrációt és autentikációt könnyen kezel.
 
 ## Megfontolt alternatívák
-- **Vue 3 + Vite + Supabase**: alacsony belépési küszöb és Supabase beépített auth modult ad, de a csapatnak nincs benne gyakorlata.
-- **Django + React**: erős admin felületet adna, de két külön build pipeline-t igényel, ami lassítja az MVP fejlesztést.
-- **Flutter Web + Firebase**: gyors UI prototípusok, viszont a webböngészős Flutter teljesítményével kapcsolatban még vannak kérdőjelek.
+- **FastAPI + PostgreSQL**: gyors, aszinkron API, de Django admin funkciói és ORM előnyei miatt nem elsődleges választás.  
+- **Node.js (Express) + PostgreSQL**: Python AI integráció szempontjából kevésbé optimális.  
+- **Vue 3 + Supabase**: gyors MVP, de a csapat React-ismerete miatt nem indokolt.
 
 ## Következmények
-- A TypeScript használatával jobb típusbiztonság érhető el, ami a későbbi refaktorokat támogatja.
-- A választott stack jól integrálható Vercel és Railway telepítési környezettel, így a zárt béta előtt is gyorsan publikálható.
-- A JavaScript stack magas ökoszisztéma zajt hoz (sok csomag), ezért szükség lesz rendszeres dependency auditokra a Sprint 5-ben.
+- A Next.js + TypeScript + TailwindCSS stack gyors frontend-fejlesztést és típusbiztonságot biztosít.  
+- A Django backend lehetővé teszi az AI-alapú szolgáltatások integrációját, adatbiztonságot és adminisztrációt.  
+- Kockázat: két nyelvet kell karbantartani (TypeScript + Python), és a JavaScript/Tailwind ökoszisztéma sok csomagot hoz, ezért rendszeres dependency audit szükséges.
+- AI-funkciók integrációja (pl. OpenAI GPT chatbot) biztosítja a személyre szabott tippeket és ügyfélszolgálati támogatást.
