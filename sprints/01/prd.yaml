@@ -29,21 +29,26 @@ value_proposition:
 
 scope:
   in:
-    - "Edzésprogram generátor otthoni és edzőtermi környezethez"
-    - "Személyre szabott vitamin- és táplálékkiegészítő ajánló és nyomkövető"
-    - "Alvásnapló és optimalizáló riasztó"
-    - "Mentális egészség napló és mood tracker"
-    - "Hidratációs emlékeztető"
-    - "Étrend- és fitnesz kalkulátor"
-    - "Barátokkal/csoportokkal való versenyzés és kihívások"
-    - "Gamifikációs pont- és achievement rendszer"
+    - "Felhasználói regisztráció és bejelentkezés"
+    - "Napi hidratáció (ml) manuális rögzítése"
+    - "Napi hangulat (1-5 skálán) manuális rögzítése"
+    - "Dashboard az adott nap hidratáció + hangulat adatainak megjelenítésére"
   out:
-    - "Offline desktop alkalmazás"
+    - "Edzésprogram generátor (Future)"
+    - "Gamifikációs pont- és achievement rendszer (Future)"
+    - "Barátokkal/csoportokkal való versenyzés és kihívások (Future)"
+    - "Étrend- és fitnesz kalkulátor (Post-MVP)"
+    - "Mentális egészség részletes naplózás (Post-MVP)"
+    - "Hidratációs emlékeztető push notifikáció (Post-MVP)"
+    - "Személyre szabott vitamin- és táplálékkiegészítő ajánló (Future)"
+    - "Alvásnapló és optimalizáló riasztó (Future)"
+    - "Offline desktop alkalmazás (Future)"
+
 
 success_metrics:
-  - "≥5 korai tesztelő aktívan használja az appot az első hónapban"
-  - "Átlagos elégedettség ≥4/5 a funkciók használata után"
-  - "A felhasználók legalább 50%-a teljesít legalább egy kihívást hetente"
+  - "Mindkét adat (hangulat + hidratáció) mentése és olvasása E2E acceptance tesztben CI alatt zöld (pass)."
+  - "A dashboard az utolsó bevitt adatot helyesen jeleníti meg legalább 3 böngészőben (Chrome, Firefox, Safari)."
+  - "Minimum 1 manuális usability teszt dokumentálása (Notion link) a sprint végére."
 risks:
   - "Adatvédelmi és GDPR követelmények betartása a személyes egészségadatok miatt"
   - "A felhasználók különböző szintű tech-ismerete miatt az app használata nehézséget okozhat"
